@@ -1,0 +1,18 @@
+{% extends "Base.html" %}
+
+{% block title %}
+  <title>Form Demo</title>
+{% endblock %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <form method="GET">
+        {% csrf_token %}
+        <label for="fname">First Name</label>
+        <input type="text" name="firstname" id="fname">
+        <label for="text1">Sentence</label>
+        <textarea name="textdata" id="text1" cols="30" rows="4"></textarea>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+  </div>
+{% endblock %}
